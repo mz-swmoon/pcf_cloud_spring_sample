@@ -1,0 +1,13 @@
+---
+applications:
+- name: pspring_api
+  memory: 1024M
+  instances: 1
+  buildpack: java_buildpack_offline
+  path: ./p-spring-api.jar
+  env:
+#    spring.active.profiles: cloud #config 서버 연동시 주석 해제
+#    datasource_jdbc-url: ${vcap.services.mysql-server.credentials.jdbcUrl}
+#    datasource_username: ${vcap.services.mysql-server.credentials.username}
+#    datasource_password: ${vcap.services.mysql-server.credentials.password}
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled : false}'
