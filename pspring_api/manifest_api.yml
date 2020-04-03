@@ -6,8 +6,5 @@ applications:
   buildpack: java_buildpack_offline
   path: ./p-spring-api.jar
   env:
-#    spring.active.profiles: cloud #config 서버 연동시 주석 해제
-#    datasource_jdbc-url: ${vcap.services.mysql-server.credentials.jdbcUrl}
-#    datasource_username: ${vcap.services.mysql-server.credentials.username}
-#    datasource_password: ${vcap.services.mysql-server.credentials.password}
+    spring_profiles_active: cloud #config 서버 연동시 주석 해제
     JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled : false}'

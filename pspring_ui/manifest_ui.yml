@@ -5,3 +5,6 @@ applications:
   instances: 1
   buildpack: java_buildpack_offline
   path: ./p-spring-ui.war
+  env:
+    spring_profiles_active: cloud #config 서버 연동시 주석 해제
+    uri_gateway: http://gateway_url/api/g/users
