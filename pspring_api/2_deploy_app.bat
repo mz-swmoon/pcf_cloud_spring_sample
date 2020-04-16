@@ -5,3 +5,4 @@ cf bind-service pspring_api config-server
 cf bind-service pspring_api registry-server
 
 
+cf start pspring_api

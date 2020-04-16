@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 cf push -f manifest_api.yml --no-start
 
 cf bind-service pspring_api mysql-server
